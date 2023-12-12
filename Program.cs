@@ -1,6 +1,23 @@
+using Desafio.Data;
+using Desafio.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ILogradouroService, LogradouroService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddDbContext<DbContextClass>();
+
+//Api aberta para o mundo conforme solicitado 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder =>
+        //Método AllowAnyOrigin permite qualquer requisição
+        builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
 
 builder.Services.AddControllers();
 

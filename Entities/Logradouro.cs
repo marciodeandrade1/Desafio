@@ -13,9 +13,9 @@ namespace Entities
         [Column("LogradouroId")]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "Logradouro obrigatório.")]
-        [MaxLength(80, ErrorMessage = "Tamanho máximo de 80 caracteres.")] 
-        public string? NomeLogradouro { get; set; }
+        [Required(ErrorMessage = "Endereço é obrigatório.")]
+        [MaxLength(80, ErrorMessage = "Tamanho máximo de 60 caracteres.")]
+        public string? Endereco { get; set; }
 
         [Required(ErrorMessage = "Cidade é obrigatória.")]
         [MaxLength(80, ErrorMessage = "Tamanho máximo de 60 caracteres.")]
