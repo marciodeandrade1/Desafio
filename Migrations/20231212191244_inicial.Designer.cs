@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Desafio.Migrations
 {
     [DbContext(typeof(DbContextClass))]
-    [Migration("20231212190925_inicial")]
+    [Migration("20231212191244_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
